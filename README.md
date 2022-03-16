@@ -17,7 +17,7 @@ This endpoint removes the Deta Base entries and the webhooks.
 The scope for the mirror and synchronization operations include :
 
 - Name and description
-- Due Date and Time, Start Date, due Reminder etc
+- Due Date and Time, Start Date, due Reminder etc 
 - Labels (including custom labels)
 - Checklists
 - Customfields
