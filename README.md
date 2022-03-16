@@ -13,6 +13,8 @@ This endpoint creates the webhook using the card ids as the idModel for webhooks
 ### /stop
 This endpoint removes the Deta Base entries and the webhooks.
 
+By keeping /setup and /clone separate endpoints, it allows users to embed and call the endpoints from within Trello automation for both a new setup as well as any two existing cards.
+
 ## Scope
 The scope for the mirror and synchronization operations include :
 
