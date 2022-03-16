@@ -15,6 +15,9 @@ This endpoint removes the Deta Base entries and the webhooks.
 
 By keeping /setup and /clone separate endpoints, it allows users to embed and call the endpoints from within Trello automation for both a new setup as well as any two existing cards.
 
+### Documentation
+The redoc documentation can be found at https://25puxs.deta.dev/redoc
+
 ## Scope
 The scope for the mirror and synchronization operations include :
 
