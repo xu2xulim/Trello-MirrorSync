@@ -27,6 +27,7 @@ The scope for the mirror and synchronization operations include :
 - Checklists
 - Customfields
 - Attachments (also 3rd party attachments like Box, Trello card / board, images, pdf...etc)
+- Comments (note : once comment is deleted it is no longer available to synchronise with the other card)
 
 ## Demo
 See https://youtu.be/Th1WMViIznc
