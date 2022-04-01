@@ -24,7 +24,7 @@ The scope for the mirror and synchronization operations include :
 - Name and description
 - Due Date and Time, Start Date, due Reminder etc
 - Labels (including custom labels)
-- Checklists
+- Checklists (**Update** now supports advanced checklist due date and member assignment)
 - Customfields
 - Attachments (also 3rd party attachments like Box, Trello card / board, images, pdf...etc)
 - Comments (**Note** : once comment is deleted it is no longer available to synchronise with the other card, to overcome this comments marked with a prefix eg **del will be deleted via a cron instead.)
