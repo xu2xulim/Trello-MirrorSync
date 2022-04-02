@@ -31,3 +31,13 @@ The scope for the mirror and synchronization operations include :
 
 ## Demo
 See https://youtu.be/Th1WMViIznc
+
+### Automation
+Here are two examples using card buttons with the endpoints to setup the mirroring :
+
+- Uses the /clone to create a copy of the card and /setup to create the create_webhooks
+`post to url "https://25puys.deta.dev/clone" with payload "{"card_id" : "{triggercardidlong}"}", and post to url "https://25puys.deta.dev/setup" with payload "{"card_id" : "{httpresponse.card_id}" , "alt_card_id" : "{httpresponse.alt_card_id}"}"`
+**Update** Trello not returning {httpresponse} correctly : Apr 2, 2022.
+
+- Uses Trello automation to create a copy of the card and /setup to create the create_webhooks
+`copy the card without comments to the top of list "Up Next" on board "Dojo 1", and post to url "https://25puys.deta.dev/setup" with payload "{"card_id" : "{triggercardidlong}", "alt_card_id" : "{copycardidlong}"}"`
