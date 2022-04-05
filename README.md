@@ -29,7 +29,15 @@ The scope for the mirror and synchronization operations include :
 - Customfields
 - Locations (**Update** Apr 3 : support available. The maps with be visible with minimum of Standard plan)
 - Attachments (also 3rd party attachments like Box, Trello card / board, images, pdf...etc)
-- Comments (**Note** : all 'created' will be record as being created by the admin. When comment is deleted it is no longer available to synchronise with the other card, to overcome this comments marked with a prefix eg **del will be deleted via a cron instead.)
+- Comments
+
+### About comments
+
+**Note** : Introduced a primary flag to facilitate the synchronisation of comments since all comment written by the webhook will be tagged to the admin user, the sender full name is add as a prefix to the comment. This applies to any user writing comments on the primary card. When comment is deleted it is no longer available, it is no longer cannot be used to flag the corresponding comment for deletion. To overcome this, comments marked with `**del**` embed will be deleted via a cron job.
+
+### About Card members
+
+Card members are not included to minimise the notifications to members. Together with comments, it allows for all the collaboration to take place on the secondary card with changes replicated to the primary card.
 
 ## Demo
 See https://youtu.be/Th1WMViIznc
@@ -42,4 +50,6 @@ Here are two examples using card buttons with the endpoints to setup the mirrori
 **Update** Trello not returning {httpresponse} correctly : Apr 2, 2022.
 
 - Uses Trello automation to create a copy of the card and /setup to create the create_webhooks (**Preferred**)
-`copy the card without comments to the top of list "Up Next" on board "Dojo 1", and post to url "https://25puys.deta.dev/setup" with payload "{"card_id" : "{triggercardidlong}", "alt_card_id" : "{copycardidlong}"}"`
+`copy the card without comments to the top of list "Up Next" on board "Dojo 1", and post to url "https://25puys.deta.dev/setup" with payload "{"card_id" : "{triggercardidlong}", "alt_card_id" : "{copycardidlong}"}" , find a card with link "{triggercardlink}", and add the clock sticker to the card`
+
+In the above example, a sticker added to the primary card.
